@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #111;
+    font-family: tahoma;
+    margin: 0;
+    padding: 0;
+}
+.slider-container {
+    margin: 10px auto;
+    width: 800px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.slider-container .image img {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+.slider-container .image .active {
+    opacity: 1;
+}
+.slider-container .show-slide {
+    position: absolute;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #111;
+    color: white;
+    z-index: 2;
+}
+.slider-control {
+    width: 800px;
+    margin: auto;
+}
+.slider-control .prev,
+.slider-control .next {
+    background-color: rgb(0, 150, 136);
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+    width: 20%;
+    user-select: none;
+    cursor: pointer;
+}
+.slider-control .prev {
+    float: left;
+}
+.slider-control .next {
+    float: right;
+}
+.slider-control .prev.disable,
+.slider-control .next.disable {
+    background-color:rgba(0, 150, 136, .5);
+    cursor: no-drop;
+}
+.slider-control .points {
+    width: 60%;
+    float: left;
+}
+.slider-control .points .ul_points {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+.slider-control .points .ul_points li {
+    padding: 7px;
+    margin: 0 10px;
+    background-color: #EEE;
+    color: black;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.slider-control .points .ul_points li.active {
+    background-color: rgb(0, 150, 136);
+    color: #FFF;
+}
